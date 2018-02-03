@@ -22,7 +22,7 @@ var GB = (function (SM) {
     my.blockTheseSites = {
         'facebook.com' : 'Facebook',
         'twitter.com' : 'Twitter',
-        'instagram.com' : 'Instagram'
+        'instagram.com' : 'Instagram',
 		'pinterest.ca' : 'Pinterest'
     }
 
@@ -71,13 +71,13 @@ if (!GB.getWatchThisInstead()) {
 let studyBreaks = [
   {type: 'Yoga',
     actions: [
-    '3 minutes of the beached whale',
+    'Take a 3 minute break and do the Mountain Pose',
     'the tree',
     'Slither like a snake!'
   ]},
   {type: 'Meditation',
     actions: [
-    'Lie down and take a break!'
+    'Lie down and take a break!',
     'Hold your breath'
     ]
   },
@@ -85,14 +85,14 @@ let studyBreaks = [
     actions: [
     'Go for a walk!',
     'Have a healthy snack! Check out the website for ideas',
-    'Go grab a glass of water! :)'
-	'If there is a dog near by, pet it!'
+    'Go grab a glass of water! :)',
+	'If there is a dog near by, pet it!',
 	'Grab a treat, you deserve it!'
   ]},
   {type: 'Inspiration',
     actions: [
-    'You are doing so well!'
-    'Keep up the great work!'
+    'You are doing so well!',
+    'Keep up the great work!',
 	'It will be worth it in the end! Keep it up!'
     ]
   }
