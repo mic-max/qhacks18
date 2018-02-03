@@ -1,25 +1,17 @@
 {
-   "name": "Hello Extensions",
-   "description" : "Base Level Extension",
+   "name": "MERA $tudy",
+   "description" : "Helps students manage their study sessions",
    "version": "1.0",
    "manifest_version": 2,
    "options_page": "pages/options.html",
    "browser_action": {
+     "default_title": "MERA $tudy",
      "default_popup": "pages/popup.html",
      "default_icon": "img/icon.png"
    },
    "background": {
-     "scripts": ["eventPage.js"],
+     "scripts": ["js/eventPage.js"],
      "persistent": false
-   },
-   "commands": {
-     "_execute_browser_action": {
-       "suggested_key": {
-         "default": "Ctrl+Shift+F",
-         "mac": "MacCtrl+Shift+F"
-       },
-       "description": "Opens hello.html"
-     }
    },
    "permissions": ["tabs"]
  }
