@@ -23,6 +23,7 @@ var GB = (function (SM) {
         'facebook.com' : 'Facebook',
         'twitter.com' : 'Twitter',
         'instagram.com' : 'Instagram'
+		'pinterest.ca' : 'Pinterest'
     }
 
     if (!SM.get('blocklist')) {
@@ -68,24 +69,34 @@ if (!GB.getWatchThisInstead()) {
 }
 
 let studyBreaks = [
-  {type: 'yoga',
+  {type: 'Yoga',
     actions: [
     '3 minutes of the beached whale',
     'the tree',
-    'slither like a snake'
+    'Slither like a snake!'
   ]},
-  {type: 'meditation',
+  {type: 'Meditation',
     actions: [
-    'close your eyes',
-    'hold your breath'
+    'Lie down and take a break!'
+    'Hold your breath'
     ]
   },
-  {type: 'misc',
+  {type: 'Random',
     actions: [
-    'go for a walk',
-    'have a snack',
-    'drink a glass of water'
-  ]}
+    'Go for a walk!',
+    'Have a healthy snack! Check out the website for ideas',
+    'Go grab a glass of water! :)'
+	'If there is a dog near by, pet it!'
+	'Grab a treat, you deserve it!'
+  ]},
+  {type: 'Inspiration',
+    actions: [
+    'You are doing so well!'
+    'Keep up the great work!'
+	'It will be worth it in the end! Keep it up!'
+    ]
+  }
+  
 ];
 
 (function myLoop() {
