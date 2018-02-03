@@ -1,0 +1,34 @@
+
+	body{
+		background-color: #FFF0F5;
+	}
+
+	h1{
+		text-align: center;
+		text-decoration: none;
+	}
+
+	ul{
+		display: inline;
+	}
+	
+	a{
+		text-decoration: none;
+		color: #000;
+	}
+
+	li a{
+		font-weight: bold;
+	}
+
+	a:hover{
+    	color: #A9A9A9;
+	}
+
+	.Nav{
+		text-align: left;
+		font-size: 12px;
+		display: inline;
+		width: 8%;
+		padding-right: 1%;
+	}

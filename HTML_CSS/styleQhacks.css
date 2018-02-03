@@ -1,0 +1,50 @@
+
+	body{
+		background-color: #AEEEC3;
+	}
+
+	h1{
+		text-align: center;
+		text-decoration: none;
+	}
+
+	hr{
+		background-color: #A9A9A9;
+		border-color: #A9A9A9;
+		width: 80%;
+		height: 0.02px;
+	}
+
+	h3{
+		text-align: center;
+	}
+
+	ul .Nav{
+		display: inline;
+	}
+	
+	a{
+		text-decoration: none;
+		color: #000;
+	}
+
+	li a{
+		font-weight: bold;
+	}
+
+	a:hover{
+    	color: #A9A9A9;
+	}
+
+	p{
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+	.Nav{
+		text-align: left;
+		font-size: 12px;
+		display: inline;
+		width: 8%;
+		padding-right: 1%;
+	}
