@@ -1,40 +1,36 @@
 var SM = (function () {
 
-    var my = {}
+    var my = {};
 
     my.get = function (key) {
-        return localStorage.getItem(key)
+        return localStorage.getItem(key);
     }
     my.put = function (key, value) {
-        return localStorage.setItem(key, value)
+        return localStorage.setItem(key, value);
     }
     my.delete = function (key) {
-        return localStorage.removeItem(key)
+        return localStorage.removeItem(key);
     }
 
-    return my
+    return my;
 
 }());
 
 var GB = (function (SM) {
-    var my = {
-      blockTheseSites: [
-        'facebook.com',
-        'twitter.com',
-        'instagram.com'
-      ],
-      enabled: true
+    var my = {};
+
+    my.blockTheseSites = {
+        'facebook.com' : 'Facebook',
+        'twitter.com' : 'Twitter',
+        'instagram.com' : 'Instagram'
     }
 
     if (!SM.get('blocklist')) {
-        SM.put('blocklist', JSON.stringify(my.blockTheseSites))
+        SM.put('blocklist', JSON.stringify(my.blockTheseSites));
     }
 
     my.getBlockedSites = function () {
-      // if(my.enabled) {
-        return JSON.parse(SM.get('blocklist'))
-      // }
-      // return null
+        return JSON.parse(SM.get('blocklist'));
     }
 
     my.setWatchThisInstead = function (value) {
