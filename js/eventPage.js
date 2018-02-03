@@ -67,6 +67,17 @@ if (!GB.getWatchThisInstead()) {
     GB.setWatchThisInstead(chrome.extension.getURL('../pages/instead.html'));
 }
 
+function notify(title, msg) {
+  chrome.notifications.create('', {
+    type: "basic",
+    title: title,
+    message: msg,
+    iconUrl: "img/icon.png"
+  })
+}
+
+notify('do some yoga', '3 minutes of the beached whale')
+
 chrome.tabs.onUpdated.addListener(function(tabId, changedInfo, tab) {
     for (site in GB.getBlockedSites()) {
       // console.log('tabId:', tabId)

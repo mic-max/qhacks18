@@ -15,5 +15,5 @@
      "scripts": ["js/eventPage.js"],
      "persistent": false
    },
-   "permissions": ["tabs"]
+   "permissions": ["tabs", "notifications"]
  }
