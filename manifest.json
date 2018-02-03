@@ -1,11 +1,11 @@
 {
-   "name": "MERA $tudy",
+   "name": "MERA Study",
    "description" : "Helps students manage their study sessions",
    "version": "1.0",
    "manifest_version": 2,
    "options_page": "pages/options.html",
    "browser_action": {
-     "default_title": "MERA $tudy",
+     "default_title": "MERA Study",
      "default_popup": "pages/popup.html"
    },
    "icons": {
@@ -15,5 +15,5 @@
      "scripts": ["js/eventPage.js"],
      "persistent": false
    },
-   "permissions": ["tabs"]
+   "permissions": ["tabs", "notifications"]
  }

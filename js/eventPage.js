@@ -22,7 +22,8 @@ var GB = (function (SM) {
     my.blockTheseSites = {
         'facebook.com' : 'Facebook',
         'twitter.com' : 'Twitter',
-        'instagram.com' : 'Instagram'
+        'instagram.com' : 'Instagram',
+		'pinterest.ca' : 'Pinterest'
     }
 
     if (!SM.get('blocklist')) {
@@ -65,6 +66,58 @@ var GB = (function (SM) {
 
 if (!GB.getWatchThisInstead()) {
     GB.setWatchThisInstead(chrome.extension.getURL('../pages/instead.html'));
+}
+
+let studyBreaks = [
+  {type: 'Yoga',
+    actions: [
+    'Take a 3 minute break and do the Mountain Pose',
+    'Take a two minute break and do the Tree Pose',
+    'Try the Cat Pose!',
+	'Enjoy a break and try Warrior I Pose!'
+  ]},
+  {type: 'Meditation',
+    actions: [
+    'Lie down and take a break!',
+    'Take a deep breath, slowly release, repeat for two minutes'
+    ]
+  },
+  {type: 'Random',
+    actions: [
+    'Take a 10 minute break and go for a walk! It will greatly reduce your stress',
+    'Have a healthy snack! Check out the dashboard for ideas',
+    'Go grab a glass of water! :)',
+	'If there is a dog near by, pet it!',
+	'Grab a treat, you deserve it!'
+  ]},
+  {type: 'Inspiration',
+    actions: [
+    'You are doing so well!',
+    'Keep up the great work!',
+	'It will be worth it in the end! Keep it up!',
+	'Smile, it looks good on you :)'
+    ]
+  }
+  
+];
+
+(function myLoop() {
+	setTimeout(() => {
+    // choose a study break
+    let studyObj = studyBreaks[Math.floor(Math.random() * studyBreaks.length)]
+    let msg = studyObj.actions[Math.floor(Math.random() * studyObj.actions.length)]
+    notify(studyObj.type, msg, `img/${studyObj.type}.png`)
+		myLoop()
+  }, 5e3)
+})()
+
+function notify(title, msg, icon) {
+  chrome.notifications.create('', {
+    type: "basic",
+    title: title,
+    message: msg,
+    iconUrl: icon
+  })
 }
 
 chrome.tabs.onUpdated.addListener(function(tabId, changedInfo, tab) {
