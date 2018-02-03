@@ -10,6 +10,7 @@
 	h1{
 		text-align: center;
 		text-decoration: none;
+		margin-top: 0px;
 	}
 
 	hr{
@@ -140,3 +141,15 @@
 .dropdown a:hover {background-color: #ddd}
 
 .show {display:block;}
+
+.tutorial p iframe {
+	min-height: 250px;
+	min-width: 300px;
+	max-height: 400px;
+	max-width: 450px;
+}
+
+.music p iframe {
+	max-width: 900px;
+	min-width: 500px;
+}
