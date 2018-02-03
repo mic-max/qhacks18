@@ -67,16 +67,21 @@ if (!GB.getWatchThisInstead()) {
     GB.setWatchThisInstead(chrome.extension.getURL('../pages/instead.html'));
 }
 
-function notify(title, msg) {
+(function myLoop() {
+	setTimeout(() => {
+    notify('do some yoga', '3 minutes of the beached whale', 'img/icon.png')
+		myLoop()
+  }, 4e3)
+})()
+
+function notify(title, msg, icon) {
   chrome.notifications.create('', {
     type: "basic",
     title: title,
     message: msg,
-    iconUrl: "img/icon.png"
+    iconUrl: icon
   })
 }
-
-notify('do some yoga', '3 minutes of the beached whale')
 
 chrome.tabs.onUpdated.addListener(function(tabId, changedInfo, tab) {
     for (site in GB.getBlockedSites()) {
