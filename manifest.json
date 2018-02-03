@@ -6,8 +6,10 @@
    "options_page": "pages/options.html",
    "browser_action": {
      "default_title": "MERA $tudy",
-     "default_popup": "pages/popup.html",
-     "default_icon": "img/icon.png"
+     "default_popup": "pages/popup.html"
+   },
+   "icons": {
+     "128": "img/icon.png"
    },
    "background": {
      "scripts": ["js/eventPage.js"],
