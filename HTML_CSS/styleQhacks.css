@@ -153,3 +153,9 @@
 	max-width: 900px;
 	min-width: 500px;
 }
+
+@media screen and (max-width: 708px){
+	.tutorial p iframe{
+		padding-bottom: 10px;
+	}
+}
