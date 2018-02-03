@@ -5,9 +5,37 @@
 <head>
 	<title>TITLE</title>
 	<link rel="shortcut icon" type="image/png" href="http://www.gbcfw.com/images/GBC%20Favicon%20Transparent.gif"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+</head>
 </head>
 
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myDropdown");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+        if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
+        }
+    }
+}
+</script>
+
 <body>
+<div style="display: inline-block; width: 100%">
+
 	<ul style="padding-left: 0px;">
 	  <li class="Nav"><a href="QhacksWebsite.html">HOME</a></li> 
       <li class="Nav"><a href="QhacksWebsite_meditation.html">MEDITATION</a></li> 
@@ -16,22 +44,75 @@
       <li class="Nav"><a href="QhacksWebsite_health.html">HEALTH</a></li>
 	</ul>
 
+	<div class="dropdown" style="float: right; padding-right: 5px;">
+	<button onclick="myFunction()" class="dropbtn">Jump to Section</button>
+	  <div id="myDropdown" class="dropdown-content">
+	    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+	    <div onClick="myFunction()">
+	    <a href="#Breakfast">Breakfast</a>
+	    <a href="#Lunch">Lunch</a>
+	    <a href="#Dinner">Dinner</a>
+	    </div>
+	</div>
+	</div>
+
+</div>
+
+
 	<div style="padding-left: 5px;">
 	<h1>Health</h1>
 
-	<h3></h3>
+	<hr>
 
-	<p style="text-align: center;"">
-	<img src="https://www.newcastle.edu.au/__data/assets/image/0007/396592/Internation_WEB.jpg" width = "30%" padding-right = "5%">
-	<img src="http://goldwallpapers.com/uploads/posts/good-scenery-wallpapers/good_scenery_wallpapers_022.jpg" width = "30%" padding-left = "5%" padding-right = "5%">
-	<img src="https://www.essex.ac.uk/-/media/header-images/study/undergraduate/campus-tours-study1000x1000/life-ksppage1000x1000/life-ksppage2-1000x1000.jpg?h=1000&w=1000&la=en" width="30%" padding-right = "5%">
-	</p>
+	<h3>Recipes</h3>
+	<h5 id="Breakfast">Breakfast</h5>
 
-	<p style="text-align: center;">
-	<img src="https://previews.123rf.com/images/elen/elen1511/elen151100020/49021765-winter-nature-scenery-of-woodland-in-sunny-day.jpg" width = "30%" padding-right = "5%">
-	<img src="http://www.uakron.edu/admissions/undergraduate/images/near-student-union.jpg" width = "30%" padding-left = "5%" padding-right = "5%">
-	<img src="https://static1.squarespace.com/static/55f23404e4b0f00150b5c785/55f396bde4b0f0037bbb6752/55f39acde4b01e51d6e57577/1442028238991/IMG_4173.JPG" width="30%" padding-right = "5%">
-	</p>
+	<div id="images">
+		<a href="https://www.jamieoliver.com/recipes/cheese-recipes/breakfast-popovers/" target="_blank"><img src="https://cdn.jamieoliver.com/recipe-database/xtra_med/51557141.jpg" height = "40%">
+		<div class="caption"> DIY oaty fruity cereal </div>
+		</a>
+
+		<a href="https://www.jamieoliver.com/recipes/vegetable-recipes/toasted-popeye-bread/" target="_blank"><img src="https://cdn.jamieoliver.com/recipe-database/xtra_med/51137596.jpg" height = "40%">
+		<div class="caption"> Toasted Popeye bread </div>
+		</a>
+
+		<a href="https://www.jamieoliver.com/recipes/breakfast-recipes/strawberry-buckwheat-pancakes/" target="_blank"><img src="https://cdn.jamieoliver.com/recipe-database/xtra_med/48349911.jpg" height = "40%">
+		<div class="caption"> Strawberry buckwheat pancakes </div>
+		</a>
+	</div>
+
+	<h5 id="Lunch">Lunch</h5>
+
+	<div id="images">
+		<a href="https://www.jamieoliver.com/recipes/rice-recipes/wild-rice-salad/" target="_blank"><img src="https://cdn.jamieoliver.com/recipe-database/xtra_med/46264266.jpg" height = "40%">
+		<div class="caption"> Wild rice salad </div>
+		</a>
+
+		<a href="https://www.jamieoliver.com/recipes/vegetables-recipes/simple-green-salad-with-lemon-dressing/" target="_blank"><img src="https://cdn.jamieoliver.com/recipe-database/xtra_med/8rBOO0HiadgBE8iGVSp7Fm.jpg" height = "40%">
+		<div class="caption"> Simple green salad with lemon dressing </div>
+		</a>
+
+		<a href="https://www.jamieoliver.com/recipes/vegetables-recipes/pepper-noodle-salad/" target="_blank"><img src="https://cdn.jamieoliver.com/recipe-database/xtra_med/Bqv5UiGr4lG9oV42x098x-.jpg" height = "40%">
+		<div class="caption"> Pepper & noodle salad </div>
+		</a>
+	</div>
+
+	<h5 id="Dinner">Dinner</h5>
+
+	<div id="images">
+		<a href="https://www.jamieoliver.com/recipes/chicken-recipes/sesame-butterflied-chicken/" target="_blank"><img src="https://cdn.jamieoliver.com/recipe-database/xtra_med/4wrJVghxqe6Btx9B3oBolb.jpg" height = "40%">
+		<div class="caption"> Sesame butterflied chicken </div>
+		</a>
+
+		<a href="https://www.jamieoliver.com/recipes/vegetables-recipes/simple-veggie-tofu-stir-fry/" target="_blank"><img src="https://cdn.jamieoliver.com/recipe-database/xtra_med/3VlWU94safrBEtz0VDtGUX.jpg" height = "40%">
+		<div class="caption"> Simple veggie & tofu stir-fry </div>
+		</a>
+
+		<a href="https://www.jamieoliver.com/recipes/fish-recipes/super-speedy-steamed-salmon/" target="_blank"><img src="https://cdn.jamieoliver.com/recipe-database/xtra_med/46261856.jpg" height = "40%">
+		<div class="caption"> Super-speedy steamed salmon </div>
+		</a>
+	</div>
+
 	</div>
 	
 </body>

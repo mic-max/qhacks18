@@ -5,7 +5,33 @@
 <head>
 	<title>TITLE</title>
 	<link rel="shortcut icon" type="image/png" href="http://www.gbcfw.com/images/GBC%20Favicon%20Transparent.gif"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </head>
+</head>
+
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myDropdown");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+        if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
+        }
+    }
+}
+</script>
 
 <body>
 	<ul style="padding-left: 0px;">
@@ -16,12 +42,24 @@
       <li class="Nav"><a href="QhacksWebsite_health.html">HEALTH</a></li>
 	</ul>
 
+		<div class="dropdown" style="float: right; padding-right: 5px;">
+	<button onclick="myFunction()" class="dropbtn">Jump to Section</button>
+	  <div id="myDropdown" class="dropdown-content">
+	    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+	    <div onClick="myFunction()">
+	    <a href="#WhiteNoise">White Noise</a>
+	    <a href="#Classical">Classical</a>
+	    <a href="#Electronic">Electronic</a>
+	    </div>
+	</div>
+	</div>
+
 	<div style="padding-left: 5px;">
 	<h1>Music</h1>
 
 	<hr>
 
-	<h3>White Noise</h3>
+	<h3 id="WhiteNoise">White Noise</h3>
 
 	<p style="text-align: center;">
 	<iframe width="100%" height="50%" src="https://www.youtube.com/embed/wzjWIxXBs_s" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -29,14 +67,14 @@
 
 	<hr>
 
-	<h3>Classical</h3>
+	<h3 id="Classical">Classical</h3>
 	<p style="text-align: center;">
 	<iframe width="100%" height="50%" src="https://www.youtube.com/embed/vwIUJbIU57s" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 	</p>
 
 	<hr>
 
-	<h3>Electronic</h3>
+	<h3 id="Electronic">Electronic</h3>
 	<p style = "text-align: center">
 	<iframe width="100%" height="50%" src="https://www.youtube.com/embed/ypQZV03l80g" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 	</p>
