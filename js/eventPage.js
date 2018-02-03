@@ -67,11 +67,35 @@ if (!GB.getWatchThisInstead()) {
     GB.setWatchThisInstead(chrome.extension.getURL('../pages/instead.html'));
 }
 
+let studyBreaks = [
+  {type: 'yoga',
+    actions: [
+    '3 minutes of the beached whale',
+    'the tree',
+    'slither like a snake'
+  ]},
+  {type: 'meditation',
+    actions: [
+    'close your eyes',
+    'hold your breath'
+    ]
+  },
+  {type: 'misc',
+    actions: [
+    'go for a walk',
+    'have a snack',
+    'drink a glass of water'
+  ]}
+];
+
 (function myLoop() {
 	setTimeout(() => {
-    notify('do some yoga', '3 minutes of the beached whale', 'img/icon.png')
+    // choose a study break
+    let studyObj = studyBreaks[Math.floor(Math.random() * studyBreaks.length)]
+    let msg = studyObj.actions[Math.floor(Math.random() * studyObj.actions.length)]
+    notify(studyObj.type, msg, `img/${studyObj.type}.png`)
 		myLoop()
-  }, 4e3)
+  }, 5e3)
 })()
 
 function notify(title, msg, icon) {
