@@ -9,8 +9,8 @@ $(() => {
   $('#delayVal').html(lastDelay)
 
   $('#timeSlide').change(ev => {
-    GB.setTimeDelay( $('#timeSlide').val() )
     let value = $('#timeSlide').val()
+    GB.setTimeDelay( value )
     $('#delayVal').html(value)
   })
 })

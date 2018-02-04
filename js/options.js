@@ -4,7 +4,18 @@ $(() => {
   const $blockthistoo = $('#blockthistoo')
   const $dontgothere = $('#dontgothere')
   const $watchthatinstead = $('#watchthatinstead')
-  const $blocklist = $('#blocklist')
+
+  function showBlockList() {
+      $('#blocklist').children().remove()
+      $.each(GB.getBlockedSites(), (i, value) => {
+        $('#blocklist').append(`<div id = 'site-${i}'><input type = 'button' id = 'unblock-${i}' value = 'UNBLOCK' />${i}: ${value}</div>`)
+          $('#unblock-' + i).click(() => {
+            console.log('hey ', i)
+              GB.removeBlockedSite(i)
+              showBlockList()
+          })
+      })
+  }
 
   $makethathappen.click(() => {
     GB.setWatchThisInstead($('#watchthatinstead').val())
@@ -29,14 +40,3 @@ $(() => {
   }
   showBlockList()
 })
-
-function showBlockList() {
-    $blocklist.children().remove()
-    $.each(GB.getBlockedSites(), (i, value) => {
-      $blocklist.append(`<div id = 'site-${i}'><input type = 'button' id = 'unblock-${i}' value = 'OH GO ON THEN' />${index}: ${value}</div>`)
-        $(`#unblock-${i}`).click(() => {
-            GB.removeBlockedSite(index)
-            showBlockList()
-        })
-    })
-}
