@@ -3,6 +3,10 @@ $(document).ready(function() {
     $("#blockedlist").append(`<div class='siterow' title='${value}'><div class='sitename'>${index}</div><span class='sitedesc'> :${value}</span></div>`);
   })
 
+  // When opening popup, loads actual values
+  $('#timeSlide').val(GB.getTimeDelay())
+  $('#delayVal').html(GB.getTimeDelay())
+
   $('#timeSlide').change(ev => {
     GB.setTimeDelay( $('#timeSlide').val() )
     let value = $('#timeSlide').val()
