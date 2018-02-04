@@ -33,6 +33,10 @@ var GB = (function (SM) {
       SM.put('delay', delay)
     }
 
+    my.getTimeDelay = function () {
+      return SM.get('delay')
+    }
+
     my.getBlockedSites = function () {
         return JSON.parse(SM.get('blocklist'));
     }
@@ -111,10 +115,12 @@ let studyBreaks = [
     // choose a study break
     let studyObj = studyBreaks[Math.floor(Math.random() * studyBreaks.length)]
     let msg = studyObj.actions[Math.floor(Math.random() * studyObj.actions.length)]
-    notify(studyObj.type, msg, `img/${studyObj.type}.png`)
+    notify(studyObj.type, msg, `../img/${studyObj.type}.png`)
+    console.log('Time Delay:', 1e3 * GB.getTimeDelay() + 4e3) // TODO testing
 		myLoop()
-  }, 5e3)
+  }, 1e3 * GB.getTimeDelay() + 1e3)
 })()
+
 
 function notify(title, msg, icon) {
   chrome.notifications.create('', {
