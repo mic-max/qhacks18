@@ -1,33 +1,36 @@
 var SM = (function () {
-
-    var my = {};
-
+    var my = {}
     my.get = function (key) {
-        return localStorage.getItem(key);
+        return localStorage.getItem(key)
     }
+
     my.put = function (key, value) {
-        return localStorage.setItem(key, value);
+        return localStorage.setItem(key, value)
     }
+
     my.delete = function (key) {
-        return localStorage.removeItem(key);
+        return localStorage.removeItem(key)
     }
 
-    return my;
-
-}());
+    return my
+}())
 
 var GB = (function (SM) {
-    var my = {};
+    var my = {}
 
     my.blockTheseSites = {
         'facebook.com' : 'Facebook',
         'twitter.com' : 'Twitter',
         'instagram.com' : 'Instagram',
-		'pinterest.ca' : 'Pinterest'
+        'pinterest.ca' : 'Pinterest'
     }
 
     if (!SM.get('blocklist')) {
-        SM.put('blocklist', JSON.stringify(my.blockTheseSites));
+        SM.put('blocklist', JSON.stringify(my.blockTheseSites))
+    }
+
+    my.setTimeDelay = function (delay) {
+      SM.put('delay', delay)
     }
 
     my.getBlockedSites = function () {
@@ -71,34 +74,32 @@ if (!GB.getWatchThisInstead()) {
 let studyBreaks = [
   {type: 'Yoga',
     actions: [
-    'Take a 3 minute break and do the Mountain Pose',
-    'Take a two minute break and do the Tree Pose',
-    'Try the Cat Pose!',
-	'Enjoy a break and try Warrior I Pose!'
+    '3 minutes of the beached whale',
+    'the tree',
+    'Slither like a snake!'
   ]},
   {type: 'Meditation',
     actions: [
     'Lie down and take a break!',
-    'Take a deep breath, slowly release, repeat for two minutes'
+    'Hold your breath'
     ]
   },
   {type: 'Random',
     actions: [
-    'Take a 10 minute break and go for a walk! It will greatly reduce your stress',
-    'Have a healthy snack! Check out the dashboard for ideas',
-    'Go grab a glass of water! :)',
-	'If there is a dog near by, pet it!',
-	'Grab a treat, you deserve it!'
+    'Go for a walk!',
+    'Have a healthy snack! Check out the website for ideas',
+    'Go grab a glass of water! :)'
+  	'If there is a dog near by, pet it!'
+	   'Grab a treat, you deserve it!'
   ]},
   {type: 'Inspiration',
     actions: [
-    'You are doing so well!',
-    'Keep up the great work!',
-	'It will be worth it in the end! Keep it up!',
-	'Smile, it looks good on you :)'
+    'You are doing so well!'
+    'Keep up the great work!'
+  	'It will be worth it in the end! Keep it up!'
     ]
   }
-  
+
 ];
 
 (function myLoop() {
