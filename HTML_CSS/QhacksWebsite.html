@@ -3,7 +3,7 @@
 <link rel="stylesheet" type="text/css" href="styleQhacks.css">
 <!-- <script src="dropdown.js"></script> -->
 
-<script>
+<!-- <script>
 // function myFunction() {
 //     document.getElementById("myDropdown").classList.toggle("show");
 // }
@@ -22,7 +22,7 @@ function filterFunction() {
         }
     }
 }
-</script>
+</script> -->
 
 
 <head>
@@ -43,7 +43,7 @@ function filterFunction() {
 	</ul>
 
 	<div class="dropdown" style="float: right; padding-right: 5px;">
-	<button id="onclick-test" class="dropbtn">Jump to Section</button>
+	<button id="onclick-test" class="dropbtn dropdownClickHandler">Jump to Section</button>
 	  <div id="myDropdown" class="dropdown-content">
 	    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
 	    <div id = "toggle_wrapper">
@@ -110,17 +110,6 @@ function filterFunction() {
 
 	</div>
 
-	<script>
-		document.getElementById("onclick-test").addEventListener("click", myEvent);
-		document.getElementById("toggle_wrapper").addEventListener("click", hideMenu);
-
-		function myEvent(){
-			 document.getElementById("myDropdown").classList.toggle("show");
-		}
-		function hideMenu(){
-			 document.getElementById("myDropdown").classList.toggle("show");
-		}
-	</script>
-	
+	<script src="../js/dropdownhandler.js"></script>
 </body>
 </html>
