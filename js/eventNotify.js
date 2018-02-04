@@ -36,9 +36,8 @@ const studyBreaks = [
     let studyObj = studyBreaks[Math.floor(Math.random() * studyBreaks.length)]
     let msg = studyObj.actions[Math.floor(Math.random() * studyObj.actions.length)]
     notify(studyObj.type, msg, `../img/${studyObj.type}.png`)
-    console.log('Time Delay:', 1e3 * GB.getTimeDelay() + 4e3) // TODO testing
 		myLoop()
-  }, 1e3 * GB.getTimeDelay() + 1e3)
+  }, 1e3 * GB.getTimeDelay() + 4e3)
 })()
 
 function notify(title, msg, icon) {

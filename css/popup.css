@@ -1,0 +1,54 @@
+html {
+    height: 470px;
+}
+body {
+    height: 100px;
+}
+body, h2, h4 {
+    font-family: 'Signika', sans-serif;
+}
+
+body p, a {
+    color: black;
+}
+
+#onestep {
+    background-color: #aeeec3;
+    border: 2px solid black;
+    padding: 5px;
+    text-align: left;
+}
+body {
+    margin: 10px;
+    text-align: center;
+    min-width: 250px;
+    min-height: 100px;
+    font-family: 'Signika', sans-serif;
+    color: rgb(0, 0, 0);
+}
+h2 {
+    font-size: 36px;
+    color: black;
+    margin-bottom: 15px;
+}
+h4 {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+.siterow {
+    clear: both;
+}
+.sitename {
+    font-size: 20px;
+    float: left;
+    width: 130px;
+    padding-bottom: 5px;
+}
+.sitedesc {
+    position: relative;
+    top: 5px;
+    line-height: 20px;
+    font-size: 12px;
+}

@@ -69,26 +69,22 @@ var GB = (function (SM) {
   }
 
   return my
-}(SM));
+}(SM))
 
 if (!GB.getWatchThisInstead()) {
   GB.setWatchThisInstead(chrome.extension.getURL('../pages/instead.html'))
 }
 
-chrome.tabs.onUpdated.addListener(function(tabId, changedInfo, tab) {
+chrome.tabs.onUpdated.addListener((tabId, changedInfo, tab) => {
     for (site in GB.getBlockedSites()) {
-      // console.log('tabId:', tabId)
-      // console.log('changedInfo:', changedInfo)
-      // console.log('tab:', tab)
         if (tab.url.match(site)) {
             chrome.tabs.update(tabId, {'url' : GB.getWatchThisInstead()}, function () {})
         }
     }
 })
 
-chrome.tabs.onCreated.addListener(function(tab) {
+chrome.tabs.onCreated.addListener((tab) => {
     for (site in GB.getBlockedSites()) {
-      // console.log('tab:', tab)
         if (tab.url.match(site)) {
             chrome.tabs.update(tab.id, {'url' : GB.getWatchThisInstead()}, function () {})
         }
