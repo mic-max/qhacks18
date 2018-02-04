@@ -5,5 +5,8 @@ $(document).ready(function() {
 
   $('#timeSlide').change(ev => {
     GB.setTimeDelay( $('#timeSlide').val() )
+    let value = $('#timeSlide').val()
+    console.log( 'delay!!!', value )
+    $('#delayVal').val(value)
   })
 })
