@@ -74,14 +74,14 @@ if (!GB.getWatchThisInstead()) {
 let studyBreaks = [
   {type: 'Yoga',
     actions: [
-    '3 minutes of the beached whale',
-    'the tree',
-    'Slither like a snake!'
+    'Take a 3 minute break and try the Tree Pose',
+    'Take a 5 minute break and try one of our many yoga positions offered on the dashboard!',
+    'Take a 4 minute break and try the Cat Position'
   ]},
   {type: 'Meditation',
     actions: [
-    'Lie down and take a break!',
-    'Hold your breath'
+    'Lie down and take a break for 5 minutes!',
+    'Take a deep breath in, hold for a few seconds, and release. Repeat for 5 minutes'
     ]
   },
   {type: 'Random',
@@ -90,7 +90,7 @@ let studyBreaks = [
     'Have a healthy snack! Check out the dashboard for ideas',
     'Go grab a glass of water! :)',
   	'If there is a dog near by, pet it!',
-	   'Grab a treat, you deserve it!'
+	'Grab a treat, you deserve it!'
   ]},
   {type: 'Inspiration',
     actions: [
