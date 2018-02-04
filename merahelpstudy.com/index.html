@@ -1,7 +1,29 @@
 <html>
 
 <link rel="stylesheet" type="text/css" href="styleQhacks.css">
-<script src="dropdown.js"></script>
+<!-- <script src="dropdown.js"></script> -->
+
+<!-- <script>
+// function myFunction() {
+//     document.getElementById("myDropdown").classList.toggle("show");
+// }
+
+function filterFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myDropdown");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+        if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
+        }
+    }
+}
+</script> -->
+
 
 <head>
 	<title>Home</title>
@@ -17,10 +39,10 @@
 	</ul>
 
 	<div class="dropdown" style="float: right; padding-right: 5px;">
-	<button onclick="myFunction()" class="dropbtn">Jump to Section</button>
+	<button id="onclick-test" class="dropbtn dropdownClickHandler">Jump to Section</button>
 	  <div id="myDropdown" class="dropdown-content">
 	    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-	    <div onClick="myFunction()">
+	    <div id = "toggle_wrapper">
 	    <a href="#Features">Features</a>
 	    <a href="#OurVision">Our Vision</a>
 	    <a href="#AboutUs">About Us</a>
@@ -33,7 +55,6 @@
 
 	<p>Welcome to MERA Study by Hack Yeah! This extension has been created to provide an all-in-one study tool for students.</p>
 	<a href="qhacks18.crx">Download Chrome Extension</a>
-
 	<hr>
 
 	<div id="Features">
@@ -42,8 +63,8 @@
 	<p>Social media can be great, but it can also be a huge distraction when you need to study. Use this extension to temporarily block access to these sites to keep you focused on what's most important.</p>
 
 
-	<h3>Set study break reminders</h3>
-	<p>Breaks are important for your mental and physical health. Reminders ensure you take these breaks and stay productive.</p>
+	<h3>Get break reminders and helful notifications</h3>
+	<p>Breaks are important for your mental and physical health. Reminders ensure you take these breaks and stay productive as well as remind you to stay healthy by going for a walk or drinking water.</p>
 
 	<h3>Watch meditation and yoga tutorials</h3>
 	<p>Meditation and yoga have been proven to improve both mental and physical health. Use study breaks to clear your mind and stay healthy.</p>
@@ -53,6 +74,9 @@
 
 	<h3>Find healthy recipes</h3>
 	<p>It can be hard to eat healthy while you're stressed and busy studying. Easy, healthy recipes that are perfect for student are provided.</p>
+
+	<h3>Set timers to keep you on track</h3>
+	<p>Try the Pomodoro method! Set the timer in the popup window to give you notifications every 25 minutes at which point you take a 5 minute break. Scale the frequency of the notifications to match your work habits.</p>
 
 	</div>
 
@@ -75,15 +99,16 @@
 
 	<p><b>Hello everyone! We are the team Hack Yeah! From left to right we are Michael Maxwell, AbdulElah Rizan, Rachel Smith and Erin Hacker. A bit about each of us:</b></p>
 	
-	<p><b>Michael:</b> Hi I'm Michael. I gi to Carelton University and I'm in my third year of Computer Science. It was my birthday yesterday and I really enjoyed spending it here at Queen's University making new friends! For the record, no I do not play basketball!</p>
+	<p><b>Michael:</b> Hi I'm Michael. I go to Carelton University and I'm in my third year of Computer Science. It was my birthday yesterday and I really enjoyed spending it here at Queen's University making new friends! For the record, no I do not play basketball!</p>
 	
-	<p><b>AbdulElah:</b> Hi, I'm Abu (like the monkey from Aladdin). I am in third year mechanical engineering here ata Queen's University. I am a self-taught technology and blockchain enthusiest. I like staying up to date with the current advances with the world's  technology. My fun fact is that I like to eat cake and read books.</p>
+	<p><b>AbdulElah:</b> Hi, I'm Abu (like the monkey from Aladdin). I am in third year mechanical engineering here at Queen's University. I am a self-taught technology and blockchain enthusiast. I like staying up to date with the current advances with the world's technology. My fun fact is that I like to eat cake and read books.</p>
 	
 	<p><b>Rachel:</b> Hello! My name is Rachel Smith and I am in my second year of Computer Engineering here at Queen's University. This is my first ever Hackathon and I've really enjoyed all of the learning experiences that I have expereinced while here. A fun fact about me is that I'm the girl that brought 2Kg of peanut butter to the Hackathon - atleast I won't starve!</p>
 	
 	<p><b>Erin:</b> Hello, I'm Erin! I am currently attending Queen's University for Computer Engineering. This is my second year here and my first ever Hackathon! Interesting enough, I have 11 grey sweaters and I'm not ashamed. </p>
 
 	</div>
-	
+
+	<script src="../js/dropdownhandler.js"></script>
 </body>
 </html>
