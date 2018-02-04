@@ -33,7 +33,7 @@ $(() => {
 function showBlockList() {
     $blocklist.children().remove()
     $.each(GB.getBlockedSites(), (i, value) => {
-      $blocklist.append(`<div id = 'site-${i}'><input type = 'button' id = 'unblock-${i}' value = 'OH GO ON THEN' />${index}: ${value}</div>`)
+      $blocklist.append(`<div id = 'site-${i}'><input type = 'button' id = 'unblock-${i}' value = 'Unblock' />${index}: ${value}</div>`)
         $(`#unblock-${i}`).click(() => {
             GB.removeBlockedSite(index)
             showBlockList()
