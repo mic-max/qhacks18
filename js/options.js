@@ -20,7 +20,7 @@ $(() => {
   $makethathappen.click(() => {
     GB.setWatchThisInstead($('#watchthatinstead').val())
     $status.text('You will now be redirected.')
-    $status.append('<a href = "http://gawker.com">TRY ME</a>')
+    $status.append(`<a href = 'http://${$watchthatinstead.val()}'>TRY ME</a>`)
   })
 
   $blockthistoo.click(() => {
