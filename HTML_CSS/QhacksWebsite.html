@@ -43,7 +43,7 @@ function filterFunction() {
 	</ul>
 
 	<div class="dropdown" style="float: right; padding-right: 5px;">
-	<button onclick="myFunction()" class="dropbtn">Jump to Section</button>
+	<button id="onclick-test" class="dropbtn">Jump to Section</button>
 	  <div id="myDropdown" class="dropdown-content">
 	    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
 	    <div onClick="myFunction()">
@@ -109,6 +109,14 @@ function filterFunction() {
 	<p><b>Erin:</b> Hello, I'm Erin! I am currently attending Queen's University for Computer Engineering. This is my second year here and my first ever Hackathon! Interesting enough, I have 11 grey sweaters and I'm not ashamed. </p>
 
 	</div>
+
+	<script>
+		document.getElementById("onclick-test").addEventListener("click", myEvent);
+
+		function myEvent(){
+			 document.getElementById("myDropdown").classList.toggle("show");
+		}
+	</script>
 	
 </body>
 </html>
