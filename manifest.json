@@ -4,7 +4,7 @@
    "version": "1.0",
    "manifest_version": 2,
    "options_page": "pages/options.html",
-   "content_security_policy":"script-src 'self' 'sha256-/WB3a8uZP7XvjC+FQ4VftdV4fT+g426vl+ztan3Ct/s='",
+   "content_security_policy":"default-src 'self' 'sha256-/WB3a8uZP7XvjC+FQ4VftdV4fT+g426vl+ztan3Ct/s='",
    "browser_action": {
      "default_title": "MERA Study",
      "default_popup": "pages/popup.html"
