@@ -4,6 +4,6 @@ $(document).ready(function() {
   })
 
   $('#timeSlide').change(ev => {
-    alert( "Handler for .change() called." );
+    GB.setTimeDelay( $('#timeSlide').val() )
   })
 })

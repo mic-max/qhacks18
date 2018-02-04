@@ -6,12 +6,12 @@ $(document).ready(function () {
     });
     $("#makethathappen").click(function () {
         GB.setWatchThisInstead($("#watchthatinstead").val());
-        $("#status").text("GO WHERE YOU LIKE MATE.  ");
+        $("#status").text("You will now be redirected.  ");
         $("#status").append("<a href='http://gawker.com'>TRY ME</a>");
     });
     $("#blockthistoo").click(function () {
         GB.addBlockedSite($("#dontgothere").val());
-        $("#status").text("G'ON AND TRY IT.  ");
+        $("#status").text("Site blocked! Try me!  ");
         var prot = /\/\//g;
         if ($("#dontgothere").val().match(prot)) {
             $("#status").append("<a href='" + $("#dontgothere").val() + "'>TRY ME</a>");
