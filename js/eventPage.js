@@ -103,7 +103,7 @@ let studyBreaks = [
     'You are doing so well!',
     'Keep up the great work!',
   	'It will be worth it in the end! Keep it up!',
-	'Put a smile on, it looks good on you:D'
+	'Put a smile on, it looks good on you:D',
 	'Give yourself a pat on the back, you\'re doing great'
     ]
   }
