@@ -10,7 +10,6 @@ $(() => {
       $.each(GB.getBlockedSites(), (i, value) => {
         $('#blocklist').append(`<div id = 'site-${i}'><input type = 'button' id = 'unblock-${i}' value = 'UNBLOCK' />${i}: ${value}</div>`)
           $('#unblock-' + i).click(() => {
-            console.log('hey ', i)
               GB.removeBlockedSite(i)
               showBlockList()
           })
