@@ -81,7 +81,8 @@ let studyBreaks = [
   {type: 'Meditation',
     actions: [
     'Lie down and take a break for 5 minutes!',
-    'Take a deep breath in, hold for a few seconds, and release. Repeat for 5 minutes'
+    'Take a deep breath in, hold for a few seconds, and release. Repeat for 5 minutes',
+	'Close your eyes and enjoy two minutes of silence and think about how far you have come'
     ]
   },
   {type: 'Random',
@@ -90,13 +91,16 @@ let studyBreaks = [
     'Have a healthy snack! Check out the dashboard for ideas',
     'Go grab a glass of water! :)',
   	'If there is a dog near by, pet it!',
-	'Grab a treat, you deserve it!'
+	'Grab a treat, you deserve it!',
+	'Call a friend for five minutes and see how he or she is :)'
   ]},
   {type: 'Inspiration',
     actions: [
     'You are doing so well!',
     'Keep up the great work!',
-  	'It will be worth it in the end! Keep it up!'
+  	'It will be worth it in the end! Keep it up!',
+	'Put a smile on, it looks good on you:D'
+	'Give yourself a pat on the back, you\'re doing great'
     ]
   }
 
