@@ -87,7 +87,7 @@ let studyBreaks = [
   {type: 'Random',
     actions: [
     'Go for a walk!',
-    'Have a healthy snack! Check out the website for ideas',
+    'Have a healthy snack! Check out the dashboard for ideas',
     'Go grab a glass of water! :)',
   	'If there is a dog near by, pet it!',
 	   'Grab a treat, you deserve it!'
