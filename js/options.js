@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $("#watchthis").click(function () {
-        GB.setWatchThisInstead(chrome.extension.getURL("instead.html"));
+        GB.setWatchThisInstead(chrome.extension.getURL("../pages/instead.html"));
         $("#status").text("YOU'RE GOOD MATE.  ");
         $("#status").append("<a href='http://gawker.com'>TRY ME</a>");
     });
@@ -20,7 +20,7 @@ $(document).ready(function () {
         }
         showBlockList();
     });
-    if (GB.getWatchThisInstead() != chrome.extension.getURL("instead.html")) {
+    if (GB.getWatchThisInstead() != chrome.extension.getURL("../pages/instead.html")) {
         $("#watchthatinstead").text(GB.getWatchThisInstead());
     }
     showBlockList();
