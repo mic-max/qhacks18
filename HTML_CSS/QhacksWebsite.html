@@ -46,7 +46,7 @@ function filterFunction() {
 	<button id="onclick-test" class="dropbtn">Jump to Section</button>
 	  <div id="myDropdown" class="dropdown-content">
 	    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-	    <div onClick="myFunction()">
+	    <div id = "toggle_wrapper">
 	    <a href="#Features">Features</a>
 	    <a href="#OurVision">Our Vision</a>
 	    <a href="#AboutUs">About Us</a>
@@ -112,8 +112,12 @@ function filterFunction() {
 
 	<script>
 		document.getElementById("onclick-test").addEventListener("click", myEvent);
+		document.getElementById("toggle_wrapper").addEventListener("click", hideMenu);
 
 		function myEvent(){
+			 document.getElementById("myDropdown").classList.toggle("show");
+		}
+		function hideMenu(){
 			 document.getElementById("myDropdown").classList.toggle("show");
 		}
 	</script>
